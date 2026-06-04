@@ -29,8 +29,7 @@ while IFS= read -r line; do
     #            (( over_limit++ ))
     #        fi
 
-    # TODO: Replace this line with your implementation (Steps 1-4)
-read -r username size <<< "$line"
+    read -r username size <<< "$line"
     (( total += size ))
     if (( size > highest_size )); then
         highest_size=$size
